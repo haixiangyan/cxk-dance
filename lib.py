@@ -6,8 +6,9 @@ ascii_char = list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI
 def get_args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--width', type=int, default=96)
-    parser.add_argument('--height', type=int, default=24)
+    parser.add_argument('command', type=str, default='run')
+    parser.add_argument('--width', type=int, default=160)
+    parser.add_argument('--height', type=int, default=56)
 
     return parser.parse_args()
 

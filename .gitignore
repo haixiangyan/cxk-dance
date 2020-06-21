@@ -171,3 +171,4 @@ cython_debug/
 .idea
 res/image_frames/*.jpg
 res/txt_frames/*.txt
+test.py
