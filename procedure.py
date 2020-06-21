@@ -1,13 +1,21 @@
-from PIL import Image
+import time
+from functools import cmp_to_key
 from os import listdir
 from os.path import isfile, join
+
+from PIL import Image
+
 from lib import to_string
+
+image_frames_dir = 'res/image_frames'
+txt_frames_dir = 'res/txt_frames'
+
+
+def is_ready():
+    return len(listdir(txt_frames_dir)) != 0
 
 
 def prepare(width, height):
-    image_frames_dir = 'res/image_frames'
-    txt_frames_dir = 'res/txt_frames'
-
     for file_name in listdir(image_frames_dir):
         print("正在处理 " + file_name)
 
@@ -26,5 +34,19 @@ def prepare(width, height):
             txt_file.write(txt)
 
 
-def show_video():
-    pass
+def display():
+    def compare_file_name(file_name1, file_name2):
+        index1 = int(file_name1.split('.')[0])
+        index2 = int(file_name2.split('.')[0])
+
+        return index1 < index2
+
+    for file_name in sorted(listdir(txt_frames_dir), key=cmp_to_key(compare_file_name)):
+        txt_path = join(txt_frames_dir, file_name)
+
+        print("\033c")
+        time.sleep(0.003)
+
+        with open(txt_path, 'r') as txt_file:
+            print(txt_file.read())
+
