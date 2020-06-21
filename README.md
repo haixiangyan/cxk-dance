@@ -4,5 +4,5 @@
 ## 分桢
 
 ```bash
-ffmpeg -i cxk-video.mov image_frames/%d.jpg
+ffmpeg -i res/cxk-video.mov res/image_frames/%d.jpg
 ```
