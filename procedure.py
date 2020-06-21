@@ -1,7 +1,8 @@
-import time
+import os
 from functools import cmp_to_key
 from os import listdir
 from os.path import isfile, join
+from time import sleep
 
 from PIL import Image
 
@@ -44,9 +45,5 @@ def display():
     for file_name in sorted(listdir(txt_frames_dir), key=cmp_to_key(compare_file_name)):
         txt_path = join(txt_frames_dir, file_name)
 
-        print("\033c")
-        time.sleep(0.003)
-
-        with open(txt_path, 'r') as txt_file:
-            print(txt_file.read())
-
+        os.system('cat ' + txt_path)
+        sleep(0.1)
