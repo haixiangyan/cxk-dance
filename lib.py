@@ -8,8 +8,8 @@ def get_args():
 
     parser.add_argument('command', type=str, default='run')
     parser.add_argument('--width', type=int, default=480)
-    parser.add_argument('--height', type=int, default=128)
-    parser.add_argument('--speed', type=float, default=0.1)
+    parser.add_argument('--height', type=int, default=180)
+    parser.add_argument('--speed', type=float, default=0.005)
 
     return parser.parse_args()
 

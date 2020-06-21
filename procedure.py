@@ -41,7 +41,7 @@ def display(speed):
         index1 = int(file_name1.split('.')[0])
         index2 = int(file_name2.split('.')[0])
 
-        return index1 < index2
+        return index1 - index2
 
     for file_name in sorted(listdir(txt_frames_dir), key=cmp_to_key(compare_file_name)):
         txt_path = join(txt_frames_dir, file_name)
