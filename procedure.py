@@ -36,7 +36,7 @@ def prepare(width, height):
             txt_file.write(txt)
 
 
-def display():
+def display(speed):
     def compare_file_name(file_name1, file_name2):
         index1 = int(file_name1.split('.')[0])
         index2 = int(file_name2.split('.')[0])
@@ -47,7 +47,7 @@ def display():
         txt_path = join(txt_frames_dir, file_name)
 
         os.system('cat ' + txt_path)
-        sleep(0.1)
+        sleep(speed)
 
 
 def clear():
