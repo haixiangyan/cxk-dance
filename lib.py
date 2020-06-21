@@ -9,7 +9,7 @@ def get_args():
     parser.add_argument('command', type=str, default='run')
     parser.add_argument('--width', type=int, default=240)
     parser.add_argument('--height', type=int, default=100)
-    parser.add_argument('--speed', type=float, default=0.005)
+    parser.add_argument('--speed', type=float, default=0.02)
 
     return parser.parse_args()
 
