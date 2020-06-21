@@ -1,5 +1,5 @@
 from lib import get_args
-from procedure import prepare, display, is_ready
+from procedure import prepare, display, is_ready, clear
 
 if __name__ == '__main__':
     args = get_args()
@@ -9,7 +9,12 @@ if __name__ == '__main__':
     width = args.width
     height = args.height
 
-    if command == 'compile' or not is_ready():
+    if command == 'clear':
+        clear()
+    if command == 'compile':
         prepare(width, height)
-
-    display()
+    if command == 'run':
+        if not is_ready():
+            print('运行 python3 main.py compile 来编译')
+        else:
+            display()

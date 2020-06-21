@@ -1,3 +1,4 @@
+import glob
 import os
 from functools import cmp_to_key
 from os import listdir
@@ -47,3 +48,9 @@ def display():
 
         os.system('cat ' + txt_path)
         sleep(0.1)
+
+
+def clear():
+    files = glob.glob(join(txt_frames_dir, '*'))
+    for f in files:
+        os.remove(f)
