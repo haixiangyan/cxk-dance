@@ -5,8 +5,15 @@
 ## 怎么用
 
 ```bash
+# 添加依赖
+pip3 install Pillow
+
 # 将原视频分帧
 ffmpeg -i res/cxk-video.mov res/image_frames/%d.jpg
+
+# 创建文件夹
+mkdir ./res/image_frames
+mkdir ./res/txt_frames
 
 # 将帧转成 txt
 ./main.py compile
