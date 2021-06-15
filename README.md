@@ -16,10 +16,10 @@ mkdir ./res/image_frames
 mkdir ./res/txt_frames
 
 # 将帧转成 txt
-./main.py compile
+python3 ./main.py compile
 
 # 开始跳w舞
-./main.py run
+python3 ./main.py run
 ```
 
 ## 参数
