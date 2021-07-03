@@ -11,7 +11,7 @@ sudo python3 -m pip install --upgrade pip
 sudo python3 -m pip install --upgrade Pillow
 ```
 
-![参考链接](https://github.com/python-pillow/Pillow/issues/5093#issuecomment-745254925)
+[参考链接](https://github.com/python-pillow/Pillow/issues/5093#issuecomment-745254925)
 
 ## 怎么用
 
