@@ -2,6 +2,17 @@
 
 蔡徐坤跳舞字符画
 
+## ⚠️ M1 Mac 问题
+
+可能安装不了 Pillow 包，可以尝试使用：
+
+```python
+sudo python3 -m pip install --upgrade pip
+sudo python3 -m pip install --upgrade Pillow
+```
+
+![参考链接](https://github.com/python-pillow/Pillow/issues/5093#issuecomment-745254925)
+
 ## 怎么用
 
 ```bash
